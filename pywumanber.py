@@ -31,7 +31,7 @@ class WuManber:
         @so:    name of the shared library linked to
     """
     from distutils.sysconfig import get_python_lib
-    self.so = CDLL(os.path.join(get_python_lib(),so))
+    self.so = CDLL(os.path.join(os.path.dirname(__file__),so))
     self.keywords =  None
     self.clist_of_cstrings = None # NOT A PYTHON TYPE
     self.len_clist_of_strings = None # NOT A PYTHON TYPE
